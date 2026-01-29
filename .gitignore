@@ -1,0 +1,22 @@
+# Environment files
+.env
+backend_28/.env
+frontend/.env
+
+# Virtual env
+venv/
+
+# Node
+frontend/node_modules/
+
+# Zip files
+*.zip
+
+
+.env
+backend_28/.env
+frontend/.env
+venv/
+frontend/node_modules/
+*.zip
+
