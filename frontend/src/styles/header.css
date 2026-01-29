@@ -67,6 +67,17 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+.nav-role {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+}
+
 .logout-btn {
   background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
 }

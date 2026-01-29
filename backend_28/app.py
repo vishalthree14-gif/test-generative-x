@@ -10,12 +10,20 @@ from routes.compains_routes import compains_bp
 
 app = Flask(__name__)
 
-# 🔑 THIS LINE IS IMPORTANT
+# # 🔑 THIS LINE IS IMPORTANT
+# CORS(
+#     app,
+#     supports_credentials=True,
+#     origins=["http://localhost:5173"]
+# )
+
 CORS(
-    auth_bp,
+    app,
     supports_credentials=True,
-    origins=["http://localhost:5173"]
+    origins=["http://127.0.0.1:5173"]
 )
+
+
 
 app.register_blueprint(auth_bp, url_prefix="/api")
 
@@ -24,14 +32,10 @@ app.register_blueprint(web_bp, url_prefix="/api")
 app.register_blueprint(youtube_bp, url_prefix="/api")
 app.register_blueprint(quiz_bp, url_prefix="/api")
 
-
 app.register_blueprint(compains_bp, url_prefix="/api")
 
 
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
-
-
-
 
 

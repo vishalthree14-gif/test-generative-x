@@ -1,0 +1,90 @@
+.notfound-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 20px;
+}
+
+.notfound-content {
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notfound-code {
+  font-size: 160px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.notfound-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.notfound-message {
+  font-size: 16px;
+  color: #9ca3af;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+.notfound-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.notfound-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.notfound-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .notfound-code {
+    font-size: 100px;
+  }
+
+  .notfound-title {
+    font-size: 22px;
+  }
+
+  .notfound-message {
+    font-size: 14px;
+  }
+
+  .notfound-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}

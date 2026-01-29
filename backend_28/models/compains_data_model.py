@@ -12,7 +12,7 @@ class CompainsDataCollection:
         self.name = name
         self.compains_id = ObjectId(compains_id)
         self.email_address = email_address
-        self.whatsapp_address = whatsapp_number
+        self.whatsapp_number = whatsapp_number
         self.status = status
         self.created_at = datetime.utcnow()
         self.updated_at = datetime.utcnow()

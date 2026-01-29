@@ -3,11 +3,11 @@ import { useAuth } from "../context/AuthContext";
 import "../styles/header.css";
 
 const Header = () => {
-  const { isLoggedIn, role, logout } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
+  const handleLogout = async () => {
+    await logout();
     navigate("/login");
   };
 
@@ -19,7 +19,7 @@ const Header = () => {
         </Link>
 
         <nav className="header-nav">
-          {!isLoggedIn ? (
+          {!user ? (
             <>
               <Link to="/login" className="nav-link">
                 Login
@@ -30,8 +30,9 @@ const Header = () => {
             </>
           ) : (
             <>
+              <span className="nav-role">{user.role}</span>
               <Link
-                to={role === "mentor" ? "/mentor/dashboard" : "/student/dashboard"}
+                to={user.role === "mentor" ? "/mentor/dashboard" : "/student/dashboard"}
                 className="nav-link"
               >
                 Dashboard

@@ -38,7 +38,7 @@ def me():
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
         return jsonify({
-            "user_id": payload["_id"],
+            "user_id": payload["user_id"],
             "role": payload["role"]
         })
     except jwt.ExpiredSignatureError:

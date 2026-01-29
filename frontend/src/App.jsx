@@ -4,7 +4,9 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import CampaignDetail from "./pages/admin/CampaignDetail";
 import UserDashboard from "./pages/user/UserDashboard";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -23,6 +25,15 @@ function App() {
           />
 
           <Route
+            path="/mentor/campaign/:id"
+            element={
+              <ProtectedRoute allowedRoles={["mentor"]}>
+                <CampaignDetail />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
             path="/student/dashboard"
             element={
               <ProtectedRoute allowedRoles={["student"]}>
@@ -30,6 +41,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

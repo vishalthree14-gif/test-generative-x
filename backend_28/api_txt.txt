@@ -54,7 +54,7 @@ curl --location 'http://localhost:5050/api/youtube-search/5a8de0e36f984942bdb8e3
 
 get all the quizes for user
 
-curl --location 'http://127.0.0.1:5050/api//get-all-quizs' \
+curl --location 'http://127.0.0.1:5050/api/get-all-quizs' \
 --header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI'
 
 
@@ -76,7 +76,7 @@ curl --location 'http://127.0.0.1:5050/api/quiz/5a8de0e36f984942bdb8e356a4085d2f
 
 
 
-curl --location 'http://127.0.0.1:5050/api//create-compains' \
+curl --location 'http://127.0.0.1:5050/api/create-compains' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI' \
 --data '{

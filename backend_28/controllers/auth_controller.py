@@ -77,7 +77,7 @@ def login_controller():
             return jsonify({"message": "Invalid email or password"}), 401
 
         payload = {
-            "_id": str(user["_id"]),
+            "user_id": str(user["_id"]),
             "role": user["role"],
             "exp": datetime.utcnow() + timedelta(hours=24)
         }
