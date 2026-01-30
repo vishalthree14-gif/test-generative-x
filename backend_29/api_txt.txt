@@ -1,0 +1,129 @@
+curl --location 'http://localhost:5050/api/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "student@gmail.com",
+    "password": "student"
+}
+'
+
+
+
+curl --location 'http://localhost:5050/api/auth/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "student12@gmail.com",
+    "password": "student12",
+    "dob": "02-01-2000", 
+    "role": "student", 
+    "phone_number": "1234567890"
+}
+'
+
+
+curl --location 'http://localhost:5050/api/create-quiz' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5Njk2NzgzfQ.n4iO9eUVrzRk9sYdlfQ7P6lz_Ox2jMpDn5bMxPMlw-c' \
+--data '{
+    "topic": "data annotation topic", 
+    "time_duration": "120",
+    "difficulty": "hard"
+}
+'
+
+
+
+curl --location 'http://localhost:5050/api/generate-question/5a8de0e36f984942bdb8e356a4085d2f' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5Njk2NzgzfQ.n4iO9eUVrzRk9sYdlfQ7P6lz_Ox2jMpDn5bMxPMlw-c'
+
+
+
+
+curl --location 'http://localhost:5050/api/search-web/5a8de0e36f984942bdb8e356a4085d2f' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5Njk2NzgzfQ.n4iO9eUVrzRk9sYdlfQ7P6lz_Ox2jMpDn5bMxPMlw-c'
+
+
+
+curl --location 'http://localhost:5050/api/youtube-search/5a8de0e36f984942bdb8e356a4085d2f' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5Njk2NzgzfQ.n4iO9eUVrzRk9sYdlfQ7P6lz_Ox2jMpDn5bMxPMlw-c'
+
+
+
+get all the quizes for user
+
+curl --location 'http://127.0.0.1:5050/api/get-all-quizs' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI'
+
+
+mentor for self created quizes
+
+
+curl --location 'http://127.0.0.1:5050/api/only-self-quizs' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI'
+
+
+
+specific quize
+
+
+curl --location 'http://127.0.0.1:5050/api/quiz/5a8de0e36f984942bdb8e356a4085d2f' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI'
+
+
+
+
+
+curl --location 'http://127.0.0.1:5050/api/create-compains' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI' \
+--data '{
+    "name": "tution-classes"
+}'
+
+
+
+curl --location 'http://127.0.0.1:5050/api/add-member' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI' \
+--data-raw '{
+    "name": "vishal",
+    "email_address": "vishal@gmail.com",
+    "whatsapp_number": "238932832",
+    "compain_id": "697a49ac383ca4c5610ec0ec"
+}'
+
+
+
+curl --location 'http://127.0.0.1:5050/api/get-compains' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI'
+
+
+
+curl --location 'http://127.0.0.1:5050/api/get-members/697a49ac383ca4c5610ec0ec' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTc5N2YzNjRhY2QyNmQzNzAxNzVmMDUiLCJyb2xlIjoibWVudG9yIiwiZXhwIjoxNzY5NzA3NTY5fQ.rvePR_qYBQHTZPNxJa-WqxljycTmfDZ6DDvNCW7sIkI'
+
+
+
+
+curl --location 'http://127.0.0.1:5050/api/save-results' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk3OTgxNmI0YWNkMjZkMzcwMTc1ZjA2Iiwicm9sZSI6InN0dWRlbnQiLCJleHAiOjE3Njk4MzM2MjF9.WbQazBEOEEpB0la8zyLMBoTqzgSKdob9x89Hxa7OPBQ' \
+--data '{
+    "marks": 7,
+    "quiz_id":"5b2ee03cd8bc417480a4df3b8a662fe5"
+}'
+
+
+
+
+
+curl --location 'http://127.0.0.1:5050/api/compains/send-emails' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjk3OTdmMzY0YWNkMjZkMzcwMTc1ZjA1Iiwicm9sZSI6Im1lbnRvciIsImV4cCI6MTc2OTgzNjU1NH0.JTPYP0QBRppJSq12Nb4Lb9_cDm7zYMFprSzUoZmk67s' \
+--data-raw '{
+    "quiz_id":"5b2ee03cd8bc417480a4df3b8a662fe5",
+    "email": ["vishallather74@gmail.com"]
+}'
+

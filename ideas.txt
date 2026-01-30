@@ -1,0 +1,8 @@
+# add money to increase the tokens. they show on the right top of the screen
+
+# and will be charged by the teacher. teacher can ask to pay to the student video phtoot pdf notes download avaible from aws
+
+# use fo toekn from the every generation either using the llm or upload limit also should be their
+
+# use compnay email to send to the student link
+
